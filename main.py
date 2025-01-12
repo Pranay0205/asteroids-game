@@ -51,6 +51,7 @@ def main():
                 if asteroid.collision(shot):
                     asteroid.split()
                     shot.kill()
+                    player.record_score()
 
         for obj in updatable:
             obj.update(dt)
